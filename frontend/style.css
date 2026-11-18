@@ -1,0 +1,181 @@
+/* GENERAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #123047, #087e8b);
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 16px;
+    color: #e0f2fe;
+}
+
+/* MAIN CONTENT */
+main {
+    max-width: 1000px;
+    margin: 35px auto;
+    padding: 0 20px;
+}
+
+/* SECTIONS */
+section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+section h2 {
+    color: #123047;
+    margin-bottom: 12px;
+    font-size: 23px;
+}
+
+/* SEARCH FORM */
+#searchForm {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+select,
+input {
+    flex: 1;
+    min-width: 180px;
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 15px;
+    outline: none;
+}
+
+select:focus,
+input:focus {
+    border-color: #087e8b;
+    box-shadow: 0 0 0 3px rgba(8, 126, 139, 0.12);
+}
+
+/* BUTTONS */
+button {
+    background: #087e8b;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 7px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 5px 5px 5px 0;
+}
+
+button:hover {
+    background: #075e68;
+    transform: translateY(-1px);
+}
+
+/* SEARCH RESULTS */
+#results {
+    margin-top: 20px;
+}
+
+.result-card,
+.history-card,
+.reference-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #087e8b;
+    padding: 18px;
+    margin: 15px 0;
+    border-radius: 8px;
+    overflow-wrap: anywhere;
+}
+
+.result-card h3,
+.history-card h3,
+.reference-card h3 {
+    color: #123047;
+    margin-bottom: 10px;
+}
+
+.result-card p,
+.history-card p,
+.reference-card p {
+    margin: 7px 0;
+}
+
+/* LINKS */
+a {
+    color: #087e8b;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* SEARCH HISTORY */
+.history-section {
+    margin-top: 25px;
+}
+
+#historyResults {
+    margin-top: 15px;
+}
+
+/* FOOTER */
+footer {
+    background: #123047;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* MOBILE RESPONSIVE DESIGN */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 25px;
+    }
+
+    main {
+        margin: 20px auto;
+        padding: 0 12px;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    #searchForm {
+        flex-direction: column;
+    }
+
+    select,
+    input,
+    #searchForm button {
+        width: 100%;
+    }
+}
