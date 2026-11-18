@@ -1,10 +1,144 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Pharma Reference Finder</title>
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+    #results {
+        margin-top: 30px;
+        padding: 25px;
+        background: #ffffff;
+        border-radius: 12px;
+    }
+
+    #results h3 {
+        color: #123456;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    #results > div {
+        background: #f4f8fb;
+        border: 1px solid #dce5ed;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 15px;
+    }
+
+    #results h4 {
+        color: #087f8c;
+        font-size: 18px;
+    }
+
+    #results p {
+        color: #444;
+        margin: 8px 0;
+    }
+
+    #results a {
+        display: inline-block;
+        margin-top: 10px;
+        color: #087f8c;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    #results a:hover {
+        text-decoration: underline;
+    }
+    </style>
 </head>
+
 <body>
-    <h1>Pharma Reference Finder</h1>
-    <p>Website is working!</p>
+
+    <header>
+        <h1>Pharma Reference Finder</h1>
+        <p>Pharmaceutical Research Reference Finder</p>
+    </header>
+
+    <main>
+
+        <section class="search-section">
+
+            <h2>Find Verified Research References</h2>
+
+            <p>
+                Search pharmaceutical drugs or
+                clinical trial identification numbers.
+            </p>
+
+            <form id="searchForm">
+
+                <label for="searchType">
+                    Select Search Type
+                </label>
+
+                <select id="searchType">
+                    <option value="trial" selected>Clinical Trials</option>
+                    <option value="drug">Drug Name</option>
+                </select>
+
+                <label for="searchInput">
+                    Enter Your Search
+                </label>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Enter drug name or trial ID"
+                    required
+                >
+
+                <button type="submit">
+                    Search References
+                </button>
+
+            </form>
+
+        </section>
+
+        <section class="results-section">
+
+            <h2>Search Results</h2>
+
+            <div id="results">
+                <p>Your verified references will appear here.</p>
+            </div>
+
+        </section>
+        <!-- Search History Section -->
+
+        <section class="history-section">
+
+            <h2>Search History</h2>
+
+            <p>View your previously searched drugs and clinical trials.</p>
+
+            <button type="button" id="historyButton">
+                View Search History
+            </button>
+
+            <div id="historyResults">
+                <p>Your previous searches will appear here.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            Pharma Reference Finder
+            | Official Research Sources
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
