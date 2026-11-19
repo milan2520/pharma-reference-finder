@@ -1,4 +1,4 @@
-const API_BASE = "http://127.0.0.1:8000";
+const API_BASE = "https://pharma-reference-finder-api.onrender.com";
 
 const searchForm = document.getElementById("searchForm");
 const searchType = document.getElementById("searchType");
